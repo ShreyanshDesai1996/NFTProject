@@ -1,0 +1,25 @@
+{
+  "name": "nftproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "randos": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyanshDesai1996/NFTProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pinata/sdk": "^1.1.23",
+    "dotenv": "^16.0.0",
+    "sharp": "^0.29.3"
+  },
+  "bugs": {
+    "url": "https://github.com/ShreyanshDesai1996/NFTProject/issues"
+  },
+  "homepage": "https://github.com/ShreyanshDesai1996/NFTProject#readme"
+}
