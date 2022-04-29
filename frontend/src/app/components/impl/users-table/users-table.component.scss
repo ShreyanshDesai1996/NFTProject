@@ -1,0 +1,20 @@
+.tableContainer {
+  @apply card flex 
+  items-center 
+  py-1.5
+    px-2
+    bg-base-100
+    shadow-2xl
+    rounded-box
+    text-base-content;
+  margin: 1.5rem 3rem;
+  @media only screen and (max-width: 768px) {
+    margin: 1rem 1rem;
+    overflow-x: scroll;
+  }
+}
+
+.table {
+  width: 100%;
+  margin: 0.3rem;
+}

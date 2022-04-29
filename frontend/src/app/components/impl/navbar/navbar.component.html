@@ -1,0 +1,63 @@
+<div class="navbar">
+  <div class="textContainer ">
+    <a class="navbarText " (click)="goHome()"> Chatbot Template </a>
+  </div>
+
+  <div class="navbarRow">
+    <div class="flex items-stretch">
+      <div class="dropdown ">
+        <div tabindex="0" class="navbarButton">
+          <mat-icon>palette</mat-icon>
+        </div>
+        <ul
+          tabindex="0"
+          class="
+          dropdown-content
+            
+          "
+        >
+          <li>
+            <a (click)="setTheme('light')"> light </a>
+            <a (click)="setTheme('dark')"> dark </a>
+            <a (click)="setTheme('cyberpunk')"> cyberpunk </a>
+            <a (click)="setTheme('aqua')"> aqua </a>
+            <a (click)="setTheme('dracula')"> dracula </a>
+            <a (click)="setTheme('fantasy')"> fantasy </a>
+            <a (click)="setTheme('forest')"> forest </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown ">
+        <div tabindex="0" class="navbarButton">
+          <mat-icon matTooltip="Hi {{firstName}}"
+          >account_circle</mat-icon>
+        </div>
+        <ul
+          tabindex="0"
+          class="
+          dropdown-content
+            
+          "
+        >
+          <li>
+            <a (click)="goHome()">
+              <mat-icon class="navbarIcon"
+                >home</mat-icon
+              >
+              Home
+            </a>
+          </li>
+          <li>
+            <a (click)="logout()">
+              <mat-icon class="navbarIcon"
+                >exit_to_app</mat-icon
+              >
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

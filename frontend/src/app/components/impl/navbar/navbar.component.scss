@@ -1,0 +1,44 @@
+@import '../../../../styles.scss';
+
+.navbar {
+  @apply mb-2 bg-primary text-neutral-content rounded-none;
+}
+
+.textContainer {
+  @apply flex-1 px-2 lg:flex-none;
+}
+
+.navbarText {
+  @apply text-xl font-bold font-sans;
+  cursor: pointer;
+  @media only screen and (max-width: 360px) {
+    font-size: $heading3;
+    font-weight: bold;
+  }
+}
+
+.navbarRow {
+  @apply flex justify-end flex-1 px-2;
+}
+
+.dropdown {
+  @apply dropdown-end;
+}
+
+.navbarButton {
+  @apply btn btn-ghost rounded-btn;
+}
+
+.navbarIcon {
+  @apply inline-block w-5 h-5 mr-2 stroke-current;
+}
+
+.dropdown-content {
+  @apply p-2
+            shadow
+            menu
+            bg-base-100
+            rounded-box
+            w-52
+            text-base-content;
+}

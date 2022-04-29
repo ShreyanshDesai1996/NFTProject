@@ -1,0 +1,13 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  @apply text-3xl font-bold font-sans my-2;
+}
+
+.subContainer {
+  @apply w-full;
+}

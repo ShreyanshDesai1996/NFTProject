@@ -1,0 +1,36 @@
+.cardsContainer {
+  @apply bg-accent shadow rounded-box;
+  min-height: 15rem;
+  margin: 1rem 3rem;
+  @media only screen and (max-width: 768px) {
+    margin: 1rem 1rem;
+  }
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit !important;
+}
+
+.card{
+  min-width: 14rem;
+  border-radius: 1.5rem;
+  @apply  bg-base-100 text-center shadow-2xl w-1/4 font-sans cursor-pointer ;
+  transition: all 0.5s ease-out;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom:1rem;
+  }
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.cardText{
+@apply text-2xl mx-8 my-12;
+
+}

@@ -1,0 +1,8 @@
+<div class="cardsContainer" *ngIf="cards">
+    <div *ngFor="let data of cards" class="card" (click)="navigate(data.route)">
+      <div class="card-body">
+        <div class="cardText">{{ data.text }}</div>
+        
+        </div>
+      </div>
+    </div>

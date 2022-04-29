@@ -1,0 +1,21 @@
+<div class="tableContainer" *ngIf="users">
+  <table class="table">
+    <thead class="tableHeader">
+      <tr>
+        <th>Whatsapp Name</th>
+        <th>Phone Number</th>
+        <th>Bot Enabled</th>
+
+        <th>Date Joined</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.whatsappName }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.botEnabled }}</td>
+        <td>{{ user.createdAt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,15 @@
+<div class="mainContainer">
+  <p class="textContainer">All Users</p>
+  <div class="subContainer">
+    <app-searchable-paginator
+      [searchText]="usersSearchText"
+      [pageIndex]="userPageIndex"
+      [pageSize]="userPageSize"
+      [itemCount]="userLength"
+      (paginationOrSearchChange)="applyUsersPageFilter($event)"
+    >
+    </app-searchable-paginator>
+
+    <app-users-table [users]="users"></app-users-table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="mainContainer">
+    <button class="btn"  (click)="onClickButton()">
+        Connect wallet
+      </button>
+      <div>
+        Address: {{address}}
+
+      </div>
+
+      <input [(ngModel)]= "contractText" type="text" placeholder="Type here" class="input w-full max-w-xs">
+      <button class="btn"  (click)="updateContract()">
+         Update contract      
+       </button>
+</div>

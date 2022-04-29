@@ -1,0 +1,64 @@
+<div
+  *ngIf="
+    searchText != undefined &&
+    pageSize != undefined &&
+    pageIndex != undefined &&
+    itemCount != undefined
+  "
+  class="searchbarRow"
+>
+  <div class="form-control">
+    <input
+      type="text"
+      placeholder="Search"
+      class="input"
+      #searchInputField
+      [(ngModel)]="searchText"
+      (keyup)="searchTextChange()"
+    />
+  </div>
+
+  <div class="paginatorRow">
+    <div class="text-accent-content">Items per page :</div>
+    <div class="dropdown">
+      <div tabindex="1" class="dropdownButton">{{ pageSize }}</div>
+      <ul tabindex="0" class="dropdown-content dropdownContent">
+        <li>
+          <a (click)="paginationChange(pageIndex - 1, 5)">5</a>
+        </li>
+        <li>
+          <a (click)="paginationChange(pageIndex - 1, 10)">10</a>
+        </li>
+        <li>
+          <a (click)="paginationChange(pageIndex - 1, 15)">15</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="btn-group">
+      <button
+        *ngIf="pageIndex != 0"
+        class="btn"
+        (click)="paginationChange(pageIndex - 1, pageSize)"
+      >
+        Previous
+      </button>
+      <button
+        class="btn"
+        [ngClass]="i == pageIndex ? 'btn-active' : ''"
+        *ngFor="let page of getPagesArray(itemCount, pageSize); let i = index"
+        (click)="paginationChange(i, pageSize)"
+      >
+        {{ i + 1 }}
+      </button>
+
+      <button
+        class="btn"
+        *ngIf="pageIndex + 1 < getPagesCount(itemCount, pageSize)"
+        (click)="paginationChange(pageIndex + 1, pageSize)"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>
