@@ -1,14 +1,27 @@
-<div class="mainContainer">
+<div class="mainContainer flex flex-col gap-4">
     <button class="btn"  (click)="onClickButton()">
         Connect wallet
       </button>
       <div>
-        Address: {{address}}
+        Address: {{walletAddress}}
 
       </div>
 
-      <input [(ngModel)]= "contractText" type="text" placeholder="Type here" class="input w-full max-w-xs">
-      <button class="btn"  (click)="updateContract()">
-         Update contract      
-       </button>
+
+      <button class="btn"  (click)="readContract()">
+        Read contract      
+      </button>
+
+      <button class="btn"  (click)="createTransaction()">
+        Create Transaction     
+      </button>
+      <button class="btn"  (click)="sendToken()">
+        Send Token     
+      </button>
+      <button class="btn"  (click)="mintNFT()">
+        Mint NFT     
+      </button>
+        
+
+       
 </div>
